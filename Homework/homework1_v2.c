@@ -21,47 +21,36 @@
 //to finish out the program execution and give 
 //the amount of time it took to complete the process
 
-
-
 //This program prompts the user for a temperature in 
 //Fahrenheit and displays the result to the screen.
-
 
 /* This program prompts the user for a temperature in 
 Fahrenheit,converts the temperature to Celsius, 
 and displays the result to the screen.*/
 
 //main function required by all C programs
-
-//Variable declarations
 int main (void) {
+	//Variable declarations
 	double tempInFahrenheit;
 	double tempInCelsius;
 
+    //Displays a prompt so the user knows what to do
+	printf("Enter the temperature in Fahrenheit: ");
 
-//Displays a prompt so the user knows what to do
+	//Reads the number types by the user and saves it into
+	// the variable tempInFahrenheit
+	scanf("%lf", &tempInFahrenheit);
 
-printf("Enter the temperature in Fahrenheit: ");
+	//Computes the temperature in Celsius
+	tempInCelsius = (tempInFahrenheit -  32) / 1.8;
 
-//Reads the number types by the user and saves it into
-// the variable tempInFahrenheit
+	//T(F) - 32 / 1.8
 
-scanf("%lf", &tempInFahrenheit);
-
-//Computes the temperature in Celsius
-
-tempInCelsius = (tempInFahrenheit -  32) / 1.8;
-
-//T(F) - 32 / 1.8
-
-//Displays the temperature in Celsius
-
-printf("%.2f F converts to %.2f degrees C", tempInFahrenheit, tempInCelsius);
-
-// All C programs need this at the end of main
-
-system("pause");
-
-return(0);
+	//Displays the temperature in Celsius
+	printf("%.2f F converts to %.2f degrees C", tempInFahrenheit, tempInCelsius);
+	system("pause");
+	
+	// All C programs need this at the end of main
+	return(0);
 }
 
